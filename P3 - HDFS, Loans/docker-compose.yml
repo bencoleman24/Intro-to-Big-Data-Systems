@@ -1,0 +1,21 @@
+services:
+    main:
+        image: p3-image
+        ports:
+        - "127.0.0.1:5000:5000"
+        volumes:
+        - "./nb:/notebooks"
+        - "./main.sh:/start.sh"
+
+    worker:
+        image: p3-image
+        volumes:
+        - "./worker.sh:/start.sh"
+        deploy:
+            replicas: 2
+       
+    
+networks:
+    default:
+        name: cs544net
+        driver: bridge

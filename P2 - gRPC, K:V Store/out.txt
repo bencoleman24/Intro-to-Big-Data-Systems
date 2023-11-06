@@ -1,0 +1,3 @@
+Cache hit rate: 0.10473815461346633
+50th percentile response time (sec): 0.0007243156433105469
+99th percentile response time (sec): 0.0010947251319885253
